@@ -2,7 +2,6 @@
     "manifest_version": 3,
     "name": "My Extension",
     "version": "0.0.1",  
-    "default_locale": "en",
     "description": "",
     
     "icons": { 
@@ -13,16 +12,16 @@
   
     "commands": {
         "dummy-command": {
-           "description": "",
+           "description": "dummy command",
            "global": false,
-           "suggested_key": {
-              "default": ""
-           }
+            "suggested_key":{
+                "default": "Ctrl+A"
+            }
         }
     },
 
     "background": {
-      "service_worker": "background.html"
+      "service_worker": "js/background.js"
     },
 
     "content_scripts": [
@@ -33,5 +32,8 @@
         }
       ],
 
-    "permissions": ["tabs"]
+    "permissions": [
+        "tabs"
+    ]
+
   }
